@@ -8,6 +8,7 @@ import {
   NavMenu,
   NavItem,
   NavLinks,
+  CV,
 } from "./NavbarElements";
 
 const Navbar = ({ toggle }) => {
@@ -32,6 +33,11 @@ const Navbar = ({ toggle }) => {
             <NavItem>
               <NavLinks to="contact">Contact Me</NavLinks>
             </NavItem>
+            <CV>
+              <a href="/Ion_Capita_CV_EN.pdf" download>
+                Download CV
+              </a>
+            </CV>
           </NavMenu>
         </NavbarContainer>
       </Nav>

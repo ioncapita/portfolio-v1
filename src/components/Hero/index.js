@@ -2,6 +2,7 @@ import React from "react";
 import lottie from "lottie-web";
 import animation from "../animations/39998-web-development.json";
 import styles from "./HeroSection.module.css";
+
 export default function HeroSection() {
   React.useEffect(() => {
     lottie.loadAnimation({
@@ -24,6 +25,10 @@ export default function HeroSection() {
           <p className={styles.intro}>
             A Fullstack web developer based in Portugal.
           </p>
+
+          <a className={styles.resume} href="/Ion_Capita_CV_EN.pdf" download>
+            Download Resume
+          </a>
         </div>
       </div>
     </div>

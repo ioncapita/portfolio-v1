@@ -70,6 +70,16 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
   height: 80px;
 `;
+export const CV = styled.a`
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  font-size: 1.1rem;
+`;
+
 export const NavLinks = styled(LinkS)`
   color: #fff;
   display: flex;
@@ -78,7 +88,13 @@ export const NavLinks = styled(LinkS)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+
   &.active {
     border-bottom: 3px solid #01bf71;
+  }
+
+  &:hover {
+    color: #01bf71;
+    transition: 0.2s ease-in-out;
   }
 `;
