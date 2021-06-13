@@ -19,22 +19,38 @@ export const SkillsContent = styled.div`
 `;
 
 export const Frontend = styled.div`
-  margin: 35px 126px;
+  padding: 35px 126px;
+  border-color: #0f97b8;
+  box-shadow: 0 25px 20px #777;
+  margin-right: 5px;
 `;
 export const Backend = styled.div`
-  margin: 35px 126px;
+  padding: 35px 126px;
+  border-color: #0f97b8;
+  box-shadow: 0 25px 20px #777;
+  margin-bottom: 10px;
+  margin-right: 5px;
 `;
 export const Tools = styled.div`
-  margin: 35px 126px;
+  padding: 35px 126px;
+  border-color: #0f97b8;
+  box-shadow: 0 25px 20px #777;
+  margin-bottom: 10px;
 `;
 export const Title = styled.h3`
   text-align: center;
   margin-bottom: 2rem;
+  padding: 0 10px;
+  border-color: black;
+  border-style: solid;
+  border-width: 0 2px 2px 2px;
+  font-weight: 700;
+  text-transform: uppercase;
 `;
 export const Image = styled.img`
   width: 4rem;
 
-  @media screen and (max-width: 649px) {
+  @media screen and (max-width: 687px) {
     width: 3rem;
   }
 `;
@@ -48,7 +64,7 @@ export const ListItem = styled.li`
 export const ImageSkills = styled.img`
   width: 2rem;
   margin-top: 20px;
-  @media screen and (max-width: 649px) {
+  @media screen and (max-width: 687px) {
     width: 1.3rem;
   }
 `;
