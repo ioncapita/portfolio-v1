@@ -6,7 +6,6 @@ import {
   SidebarWrapper,
   SidebarMenu,
   SidebarLink,
-  CVSide,
 } from "./SidebarElements";
 
 const Sidebar = ({ isOpen, toggle }) => {
@@ -29,11 +28,6 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink to="/contact" onClick={toggle}>
             Contact
           </SidebarLink>
-          <CVSide>
-            <a href="/Ion_Capita_CV_EN.pdf" download>
-              Download CV
-            </a>
-          </CVSide>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>

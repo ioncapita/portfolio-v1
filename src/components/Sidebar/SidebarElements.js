@@ -45,20 +45,6 @@ export const SidebarMenu = styled.ul`
     grid-template-rows: repeat(6, 40px);
   }
 `;
-export const CVSide = styled.a`
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  list-style: none;
-  text-align: center;
-  align-items: center;
-  font-size: 1.5rem;
-  
-  &:hover {
-    color: #01bf71;
-    transition: 0.2s ease-in-out;
-  }
-`;
 
 export const SidebarLink = styled(LinkS)`
   display: flex;

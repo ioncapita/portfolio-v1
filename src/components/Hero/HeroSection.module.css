@@ -14,11 +14,10 @@
 
 .container {
   position: relative;
-  width: 100vw;
   background: #eff7fa;
   height: 800px;
   z-index: 1;
-  transform: skew(0deg, 10deg) translateY(-170px);
+  transform: skew(0deg, 4deg) translateY(-170px);
 }
 
 .elements {
@@ -34,15 +33,15 @@
   font-weight: 200;
   z-index: 2;
   margin-right: 2rem;
-  transform: skew(0deg, -1deg);
+  transform: skew(0deg, -10deg);
 }
 
 .name {
   color: #0f97b8;
   font-size: 4rem;
-  font-weight: 500;
+  font-weight: 700;
   z-index: 2;
-  transform: skew(0deg, -1deg);
+  padding-top: 1rem;
 }
 
 .text_position {
@@ -50,12 +49,12 @@
   top: 56%;
   left: 30%;
   transform: translate(-30%, -56%);
-  transform: skew(0deg, -10deg);
+  transform: skew(0deg, -4deg);
 }
 
 .intro {
-  font-size: 1rem;
-  color: #00455e;
+  font-size: 1.1rem;
+  color: #666666;
   z-index: 2;
 }
 
@@ -81,6 +80,7 @@
   overflow: hidden;
   transition: 0.2s;
   border-radius: 1rem;
+  margin-top: 1rem;
 }
 
 .resume:hover {

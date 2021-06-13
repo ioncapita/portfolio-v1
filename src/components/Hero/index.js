@@ -23,7 +23,7 @@ export default function HeroSection() {
           </h1>
           <h2 className={styles.name}>I'm Ion.</h2>
           <p className={styles.intro}>
-            A Fullstack web developer based in Portugal.
+            A Full-stack web developer based in Portugal.
           </p>
 
           <a className={styles.resume} href="/Ion_Capita_CV_EN.pdf" download>
