@@ -5,6 +5,7 @@ import Sidebar from "../Sidebar/index";
 import HeroSection from "../Hero/index";
 import About from "../AboutMe";
 import Skills from "../Skills";
+import Projects from "../MyProjects";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,6 +21,7 @@ const Home = () => {
       <HeroSection />
       <About />
       <Skills />
+      <Projects />
     </>
   );
 };

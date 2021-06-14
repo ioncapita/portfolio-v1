@@ -4,8 +4,7 @@ import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
   background: transparent;
-  height: 80px;
-  //   margin-top: -80px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,7 +14,11 @@ export const Nav = styled.nav`
   transition: 0.6s ease-in-out;
 
   &.active {
-    background: white;
+    background: linear-gradient(
+      90deg,
+      rgb(0, 128, 89) 0%,
+      rgba(255, 255, 255, 1) 100%
+    );
   }
 
   @media screen and (max-width: 960px) {
@@ -34,23 +37,24 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-  color: #255784;
+  color: var(--logo);
+  font-family: "Shadows Into Light", cursive;
   justify-self: flex-start;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   display: flex;
   align-items: center;
   margin-left: 24px;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 2px;
   text-decoration: none;
   transition: 0.6s;
   padding-top: 40px;
 
   &.active {
-    color: #255784;
+    color: var(--first-color);
     font-size: 1.2rem;
-    font-weight: 500;
+    font-weight: 700;
     padding-top: 1px;
   }
 `;
@@ -65,14 +69,12 @@ export const MobileIcon = styled.div`
     right: 0;
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
-    padding-top: 0.5rem;
     transition: 0.6s;
     cursor: pointer;
-    color: #255784;
+    color: var(--text);
 
     &.active {
-      padding-top: 0;
-      font-size: 1.7rem;
+      font-size: 1.5rem;
     }
   }
 `;
@@ -84,6 +86,8 @@ export const NavMenu = styled.ul`
   margin-right: -22px;
   font-weight: 400;
   font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 
   @media screen and (max-width: 768px) {
     display: none;
@@ -91,10 +95,16 @@ export const NavMenu = styled.ul`
 `;
 export const NavItem = styled.li`
   height: 80px;
+
+  a {
+    &:hover {
+      color: #9e7400;
+    }
+  }
 `;
 
 export const NavLinks = styled(LinkS)`
-  color: #255784;
+  color: var(--text);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -105,14 +115,9 @@ export const NavLinks = styled(LinkS)`
   padding-top: 40px;
 
   &.active {
-    color: #255784;
+    color: var(--first-color);
     font-size: 1rem;
     font-weight: 400;
     padding-top: 1px;
-  }
-
-  &:hover {
-    color: #01bf71;
-    transition: 0.2s ease-in-out;
   }
 `;

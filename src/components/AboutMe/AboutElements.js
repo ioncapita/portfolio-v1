@@ -11,10 +11,11 @@ export const Image = styled.img`
   max-width: 40%;
   display: block;
   height: auto;
+  fill: red;
 `;
 
 export const Question = styled.h2`
-  color: #0f97b8;
+  color: var(--text);
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -31,7 +32,7 @@ export const AboutMeContainer = styled.div`
 `;
 
 export const Name = styled.h2`
-  color: #0f97b8;
+  color: var(--text);
   font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;

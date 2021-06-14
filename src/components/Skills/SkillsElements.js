@@ -1,16 +1,20 @@
 import styled from "styled-components";
+import { animated } from "react-spring";
 
 export const SkillsContainer = styled.div`
-  background: #eff7fa;
-  height: 800px;
+  background: linear-gradient(
+    90deg,
+    rgb(0, 128, 89) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  height: auto;
   transform: skew(0deg, -4deg) translateY(-170px);
+  z-index: -9999;
 `;
 
 export const SkillsContent = styled.div`
   max-width: 1366px;
-  height: 800px;
   margin: auto;
-  /* background: red; */
   transform: skew(0deg, 4deg);
   display: flex;
   justify-content: space-around;
@@ -18,28 +22,51 @@ export const SkillsContent = styled.div`
   text-align: center;
 `;
 
-export const Frontend = styled.div`
+export const Frontend = styled(animated.div)`
   padding: 35px 126px;
-  border-color: #0f97b8;
-  box-shadow: 0 25px 20px #777;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
   margin-right: 5px;
-`;
-export const Backend = styled.div`
-  padding: 35px 126px;
-  border-color: #0f97b8;
-  box-shadow: 0 25px 20px #777;
   margin-bottom: 10px;
+  margin-top: 4rem;
+  overflow: hidden;
+  z-index: 9999;
+`;
+export const Backend = styled(animated.div)`
+  padding: 35px 126px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
   margin-right: 5px;
-`;
-export const Tools = styled.div`
-  padding: 35px 126px;
-  border-color: #0f97b8;
-  box-shadow: 0 25px 20px #777;
   margin-bottom: 10px;
+  margin-top: 4rem;
+  overflow: hidden;
+  z-index: 9999;
+`;
+export const Tools = styled(animated.div)`
+  padding: 35px 126px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  margin-right: 5px;
+  margin-top: 4rem;
+  overflow: hidden;
+  z-index: 9999;
 `;
 export const Title = styled.h3`
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  color: black;
   padding: 0 10px;
   border-color: black;
   border-style: solid;
@@ -63,7 +90,7 @@ export const ListItem = styled.li`
 
 export const ImageSkills = styled.img`
   width: 2rem;
-  margin-top: 20px;
+  margin-top: 5px;
   @media screen and (max-width: 687px) {
     width: 1.3rem;
   }

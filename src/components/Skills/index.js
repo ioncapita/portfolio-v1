@@ -1,4 +1,5 @@
 import React from "react";
+import { useSpring, animated } from "react-spring";
 import {
   SkillsContainer,
   SkillsContent,
@@ -10,6 +11,7 @@ import {
   ListItem,
   ImageSkills,
 } from "./SkillsElements";
+// import styled from "styled-components";
 
 import frontend from "../animations/front-end.svg";
 import backend from "../animations/backend.svg";
@@ -31,10 +33,29 @@ import vscode from "../animations/visual-studio-code.svg";
 import postman from "../animations/postman.png";
 
 const Skills = () => {
+  const [props, set] = useSpring(() => ({
+    xys: [0, 0, 1],
+    config: { mass: 10, tension: 200, friction: 50 },
+  }));
+
+  const calc = (x, y) => [
+    -(y - window.innerHeight / 2) / 20,
+    (x - window.innerWidth / 2) / 20,
+    1,
+  ];
+  const trans = (x, y, s) =>
+    `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+
   return (
     <SkillsContainer>
       <SkillsContent>
-        <Frontend>
+        <Frontend
+          onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+          onMouseLeave={() => set({ xys: [0, 0, 1] })}
+          style={{
+            transform: props.xys.interpolate(trans),
+          }}
+        >
           <Image src={frontend} />
           <Title>Frontend</Title>
           <ImageSkills src={html} />
@@ -52,7 +73,13 @@ const Skills = () => {
           <ImageSkills src={typescript} />
           <ListItem>TypeScript</ListItem>
         </Frontend>
-        <Backend>
+        <Backend
+          onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+          onMouseLeave={() => set({ xys: [0, 0, 1] })}
+          style={{
+            transform: props.xys.interpolate(trans),
+          }}
+        >
           <Image src={backend} />
           <Title>Backend</Title>
           <ImageSkills src={php} />
@@ -66,7 +93,13 @@ const Skills = () => {
           <ImageSkills src={mongo} />
           <ListItem>MongoDB</ListItem>
         </Backend>
-        <Tools>
+        <Tools
+          onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
+          onMouseLeave={() => set({ xys: [0, 0, 1] })}
+          style={{
+            transform: props.xys.interpolate(trans),
+          }}
+        >
           <Image src={tools} />
           <Title>Tools</Title>
           <ImageSkills src={git} />

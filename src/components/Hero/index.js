@@ -1,6 +1,6 @@
 import React from "react";
 import lottie from "lottie-web";
-import animation from "../animations/39998-web-development.json";
+import animation from "../animations/8306-programming-animation.json";
 import styles from "./HeroSection.module.css";
 
 export default function HeroSection() {
