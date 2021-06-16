@@ -3,7 +3,6 @@
   background: #1d1d1d;
   height: 900px;
   z-index: 1;
-  transform: skew(0deg, 8deg) translateY(-140px);
 }
 
 .elements {
@@ -47,8 +46,6 @@
   top: 33%;
   left: 30%;
   transform: translate(-30%, -33%);
-  transform: skew(0deg, -8deg);
-
 }
 
 .intro {
@@ -102,4 +99,9 @@
   .intro {
     font-size: 1.1rem;
   }
+}
+
+.particles {
+  height: 100%;
+  z-index: -9999;
 }

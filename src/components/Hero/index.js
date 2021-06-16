@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./HeroSection.module.css";
+import Particles from "react-particles-js";
 import styled from "styled-components";
 import { Github } from "@styled-icons/boxicons-logos/Github";
 import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin";
@@ -125,6 +126,7 @@ export default function HeroSection() {
 
   return (
     <div id="top" className={styles.container}>
+      <Particles className={styles.particles}></Particles>
       <div className={styles.elements}>
         <div className={styles.text_position}>
           <h1 className={styles.hello}>Hi,</h1>

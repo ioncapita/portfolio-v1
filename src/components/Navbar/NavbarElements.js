@@ -18,6 +18,13 @@ export const Nav = styled.nav`
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
     height: 80px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 100%
+    );
+    backdrop-filter: blur(5px);
   }
 
   @media screen and (max-width: 960px) {

@@ -7,7 +7,12 @@ export const SidebarContainer = styled.aside`
   z-index: 999;
   width: 100%;
   height: 100%;
-  background: #0d0d0d;
+  box-shadow: 0 8px 32px 0 rgba(121, 121, 121, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
   display: grid;
   align-items: center;
   top: 0;
@@ -54,7 +59,7 @@ export const SidebarLink = styled(LinkS)`
   text-decoration: none;
   list-style: none;
   transition: 0.2s ease-in-out;
-  color: #fff;
+  color: #05fdd8;
   cursor: pointer;
   text-transform: uppercase;
 
