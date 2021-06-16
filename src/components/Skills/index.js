@@ -1,5 +1,5 @@
 import React from "react";
-import { useSpring, animated } from "react-spring";
+import { useSpring } from "react-spring";
 import {
   SkillsContainer,
   SkillsContent,
@@ -10,8 +10,12 @@ import {
   Image,
   ListItem,
   ImageSkills,
+  TitleContent,
+  QuoteContent,
+  TitleContainer,
+  AlignedItem,
+  Hashtag,
 } from "./SkillsElements";
-// import styled from "styled-components";
 
 import frontend from "../animations/front-end.svg";
 import backend from "../animations/backend.svg";
@@ -47,8 +51,17 @@ const Skills = () => {
     `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
   return (
-    <SkillsContainer>
+    <SkillsContainer id="skills">
       <SkillsContent>
+        <TitleContainer>
+          <TitleContent>
+            <Hashtag>#</Hashtag>skills
+          </TitleContent>
+          <QuoteContent>
+            I always enjoy learning new things. Especially the technologies that
+            make your company special.
+          </QuoteContent>
+        </TitleContainer>
         <Frontend
           onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
           onMouseLeave={() => set({ xys: [0, 0, 1] })}
@@ -58,21 +71,36 @@ const Skills = () => {
         >
           <Image src={frontend} />
           <Title>Frontend</Title>
-          <ImageSkills src={html} />
-          <ListItem>HTML</ListItem>
-          <ImageSkills src={css} />
-          <ListItem>CSS</ListItem>
-          <ImageSkills src={sass} />
-          <ListItem>SASS</ListItem>
-          <ImageSkills src={js} />
-          <ListItem>JavaScript</ListItem>
-          <ImageSkills src={react} />
-          <ListItem>React</ListItem>
-          <ImageSkills src={angular} />
-          <ListItem>Angular</ListItem>
-          <ImageSkills src={typescript} />
-          <ListItem>TypeScript</ListItem>
+          <AlignedItem>
+            <ImageSkills src={html} />
+            <ListItem>HTML</ListItem>
+          </AlignedItem>
+          <AlignedItem>
+            <ImageSkills src={css} />
+            <ListItem>CSS</ListItem>
+          </AlignedItem>
+          <AlignedItem>
+            <ImageSkills src={sass} />
+            <ListItem>SASS</ListItem>
+          </AlignedItem>
+          <AlignedItem>
+            <ImageSkills src={js} />
+            <ListItem>JavaScript</ListItem>
+          </AlignedItem>
+          <AlignedItem>
+            <ImageSkills src={react} />
+            <ListItem>React</ListItem>
+          </AlignedItem>
+          <AlignedItem>
+            <ImageSkills src={angular} />
+            <ListItem>Angular</ListItem>
+          </AlignedItem>
+          <AlignedItem>
+            <ImageSkills src={typescript} />
+            <ListItem>TypeScript</ListItem>
+          </AlignedItem>
         </Frontend>
+
         <Backend
           onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
           onMouseLeave={() => set({ xys: [0, 0, 1] })}
@@ -82,16 +110,26 @@ const Skills = () => {
         >
           <Image src={backend} />
           <Title>Backend</Title>
-          <ImageSkills src={php} />
-          <ListItem>PHP</ListItem>
-          <ImageSkills src={laravel} />
-          <ListItem>Laravel</ListItem>
-          <ImageSkills src={node} />
-          <ListItem>NodeJS</ListItem>
-          <ImageSkills src={mysql} />
-          <ListItem>MySQL</ListItem>
-          <ImageSkills src={mongo} />
-          <ListItem>MongoDB</ListItem>
+          <AlignedItem>
+            <ImageSkills src={php} />
+            <ListItem>PHP</ListItem>
+          </AlignedItem>
+          <AlignedItem>
+            <ImageSkills src={laravel} />
+            <ListItem>Laravel</ListItem>
+          </AlignedItem>
+          <AlignedItem>
+            <ImageSkills src={node} />
+            <ListItem>NodeJS</ListItem>
+          </AlignedItem>
+          <AlignedItem>
+            <ImageSkills src={mysql} />
+            <ListItem>MySQL</ListItem>
+          </AlignedItem>
+          <AlignedItem>
+            <ImageSkills src={mongo} />
+            <ListItem>MongoDB</ListItem>
+          </AlignedItem>
         </Backend>
         <Tools
           onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
@@ -102,12 +140,18 @@ const Skills = () => {
         >
           <Image src={tools} />
           <Title>Tools</Title>
-          <ImageSkills src={git} />
-          <ListItem>Git</ListItem>
-          <ImageSkills src={vscode} />
-          <ListItem>VSCode</ListItem>
-          <ImageSkills src={postman} />
-          <ListItem>Postman</ListItem>
+          <AlignedItem>
+            <ImageSkills src={git} />
+            <ListItem>Git</ListItem>
+          </AlignedItem>
+          <AlignedItem>
+            <ImageSkills src={vscode} />
+            <ListItem>VSCode</ListItem>
+          </AlignedItem>
+          <AlignedItem>
+            <ImageSkills src={postman} />
+            <ListItem>Postman</ListItem>
+          </AlignedItem>
         </Tools>
       </SkillsContent>
     </SkillsContainer>

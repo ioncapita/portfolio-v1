@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import {
   Nav,
@@ -15,29 +15,20 @@ const Navbar = ({ toggle }) => {
   const [navbar, setNavbar] = useState(false);
   const [ul, setUl] = useState(false);
 
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   const changeBackground = () => {
-    if (window.scrollY >= 30) {
+    if (window.scrollY >= 50) {
       setNavbar(true);
     } else {
       setNavbar(false);
     }
   };
 
-  const toggleHome = () => {
-    scroll.scrollToTop();
-  };
-  const toggleAbout = () => {
-    scroll.scrollTo(570);
-  };
-  const toggleSkills = () => {
-    scroll.scrollTo(1290);
-  };
-  const toggleProjects = () => {
-    scroll.scrollTo(2540);
-  };
-
   const changeBackgroundUl = () => {
-    if (window.scrollY >= 30) {
+    if (window.scrollY >= 50) {
       setUl(true);
     } else {
       setUl(false);
@@ -52,11 +43,12 @@ const Navbar = ({ toggle }) => {
       <Nav className={navbar ? "navbar active" : "navbar"}>
         <NavbarContainer>
           <NavLogo
-            onClick={toggleHome}
             className={navbar ? "navbar active" : "navbar"}
-            to="/"
+            onClick={toggleHome}
+            spy={true}
+            smooth={true}
           >
-            CAPITA
+            I
           </NavLogo>
           <MobileIcon className={ul ? "ul active" : "ul"} onClick={toggle}>
             <FaBars />
@@ -64,33 +56,44 @@ const Navbar = ({ toggle }) => {
           <NavMenu>
             <NavItem>
               <NavLinks
-                onClick={toggleAbout}
                 className={ul ? "ul active" : "ul"}
                 to="about"
+                spy={true}
+                smooth={true}
+                offset={-220}
               >
                 About
               </NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks
-                onClick={toggleSkills}
                 className={ul ? "ul active" : "ul"}
                 to="skills"
+                spy={true}
+                smooth={true}
               >
                 Skills
               </NavLinks>
             </NavItem>
             <NavItem>
               <NavLinks
-                onClick={toggleProjects}
                 className={ul ? "ul active" : "ul"}
                 to="projects"
+                spy={true}
+                smooth={true}
+                offset={-220}
               >
                 Projects
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks className={ul ? "ul active" : "ul"} to="contact">
+              <NavLinks
+                className={ul ? "ul active" : "ul"}
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-85}
+              >
                 Contact Me
               </NavLinks>
             </NavItem>

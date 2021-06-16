@@ -3,33 +3,32 @@ import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
-  background: transparent;
-  height: 60px;
+  background: #1d1d1d;
+  height: 90px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: sticky;
   top: 0;
   z-index: 10;
-  transition: 0.6s ease-in-out;
+  transition: 0.3s ease-in-out;
 
   &.active {
-    background: linear-gradient(
-      90deg,
-      rgb(0, 128, 89) 0%,
-      rgba(255, 255, 255, 1) 100%
-    );
+    box-shadow: 0 8px 32px 0 rgba(121, 121, 121, 0.37);
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    height: 80px;
   }
 
   @media screen and (max-width: 960px) {
-    transition: 0.8s all ease;
+    transition: 0.3s all ease;
   }
 `;
 
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 60px;
   z-index: 1;
   width: 100%;
   padding: 0 24px;
@@ -37,25 +36,38 @@ export const NavbarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-  color: var(--logo);
-  font-family: "Shadows Into Light", cursive;
+  font-family: "Source Code Pro", monospace;
   justify-self: flex-start;
   cursor: pointer;
-  font-size: 1.9rem;
   display: flex;
   align-items: center;
-  margin-left: 24px;
-  font-weight: 700;
-  letter-spacing: 2px;
   text-decoration: none;
-  transition: 0.6s;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-size: 5em;
+  font-weight: 700;
   padding-top: 40px;
+  color: #fd2155;
+  transform: rotateZ(340deg);
+  text-shadow: 1px 1px 1px #05fdd8, 1px 2px 1px #05fdd8, 1px 3px 1px #05fdd8,
+    1px 4px 1px #05fdd8, 1px 5px 1px #05fdd8, 1px 6px 1px #05fdd8,
+    1px 7px 1px #05fdd8, 1px 8px 1px #05fdd8, 1px 9px 1px #05fdd8,
+    1px 10px 1px #05fdd8, 1px 18px 6px rgba(16, 16, 16, 0.4),
+    1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+    1px 30px 60px rgba(16, 16, 16, 0.4);
 
   &.active {
-    color: var(--first-color);
-    font-size: 1.2rem;
+    color: #fd2155;
+    transform: rotateZ(340deg);
+    text-shadow: 1px 1px 1px #05fdd8, 1px 2px 1px #05fdd8, 1px 3px 1px #05fdd8,
+      1px 4px 1px #05fdd8, 1px 5px 1px #05fdd8, 1px 6px 1px #05fdd8,
+      1px 7px 1px #05fdd8, 1px 8px 1px #05fdd8, 1px 9px 1px #05fdd8,
+      1px 10px 1px #05fdd8, 1px 18px 6px rgba(16, 16, 16, 0.4),
+      1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2),
+      1px 30px 60px rgba(16, 16, 16, 0.4);
+    font-size: 3rem;
     font-weight: 700;
-    padding-top: 1px;
+    padding: 0;
   }
 `;
 
@@ -68,13 +80,13 @@ export const MobileIcon = styled.div`
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    font-size: 2rem;
     transition: 0.6s;
     cursor: pointer;
-    color: var(--text);
+    color: #fd2155;
 
     &.active {
-      font-size: 1.5rem;
+      font-size: 2rem;
     }
   }
 `;
@@ -94,30 +106,30 @@ export const NavMenu = styled.ul`
   }
 `;
 export const NavItem = styled.li`
-  height: 80px;
+  height: 60px;
 
   a {
     &:hover {
-      color: #9e7400;
+      color: #fd2155;
     }
   }
 `;
 
 export const NavLinks = styled(LinkS)`
-  color: var(--text);
+  color: #05fdd8;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-  transition: 0.6s ease-in-out;
+  transition: 0.3s ease-in-out;
   padding-top: 40px;
+  font-weight: 600;
 
   &.active {
-    color: var(--first-color);
-    font-size: 1rem;
-    font-weight: 400;
+    color: #fd2155;
+    font-weight: 600;
     padding-top: 1px;
   }
 `;

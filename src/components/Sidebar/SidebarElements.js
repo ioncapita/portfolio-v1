@@ -18,7 +18,7 @@ export const SidebarContainer = styled.aside`
 `;
 
 export const CloseIcon = styled(FaTimes)`
-  color: var(--text);
+  color: #fd2155;
 `;
 
 export const Icon = styled.div`
@@ -56,9 +56,10 @@ export const SidebarLink = styled(LinkS)`
   transition: 0.2s ease-in-out;
   color: #fff;
   cursor: pointer;
+  text-transform: uppercase;
 
   &:hover {
-    color: #01bf71;
+    color: #fd2155;
     transition: 0.2s ease-in-out;
   }
 `;

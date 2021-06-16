@@ -1,14 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;500;600;700;900&display=swap");
+
+@font-face {
+  font-family: "Coolvetica";
+  src: url("./fonts/coolvetica\ rg.ttf") format("opentype");
+}
+@font-face {
+  font-family: "CoolveticaCondensed";
+  src: url("./fonts/coolvetica\ condensed\ rg.ttf") format("opentype");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Source Code Pro", monospace;
+  font-family: "Coolvetica", monospace;
 }
 
 :root {
-  --first-color: #1b4332;
-  --text: #003827;
-  --logo: #003827;
+  --first-color: #fd2155;
+  --second-color: #05fdd8;
+  --bg: #1d1d1d;
+}
+
+body {
+  background: #1f1f1f;
 }
