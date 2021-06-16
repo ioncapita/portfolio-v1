@@ -99,21 +99,28 @@ const Code = styled(CodeAlt)`
   color: var(--first-color);
   margin: 1rem 0 1rem 0;
   transition: 0.5s;
+  @media screen and (max-width: 687px) {
+    width: 50px;
+  }
 `;
 
 const BookIcon = styled(Book)`
   width: 80px;
   color: var(--first-color);
   margin: 1rem 0 1rem 0;
-
   transition: 0.5s;
+  @media screen and (max-width: 687px) {
+    width: 50px;
+  }
 `;
 const PeopleIcon = styled(People)`
   width: 80px;
   color: var(--first-color);
   margin: 1rem 0 1rem 0;
-
   transition: 0.5s;
+  @media screen and (max-width: 687px) {
+    width: 50px;
+  }
 `;
 
 const Contact = () => {

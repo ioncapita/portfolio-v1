@@ -13,6 +13,7 @@ export const ConnectContainer = styled.div`
   justify-content: space-around;
   align-content: center;
   flex-wrap: wrap;
+
 `;
 export const QuoteContainer = styled.div``;
 
@@ -76,8 +77,8 @@ export const Content = styled.div`
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   margin: 1rem;
-
   @media screen and (max-width: 687px) {
+    width: 250px;
   }
 `;
 

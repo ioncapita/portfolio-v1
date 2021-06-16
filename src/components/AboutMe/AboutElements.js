@@ -61,6 +61,11 @@ export const Name = styled.h2`
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
 `;
 
 export const Description = styled.p`
@@ -68,6 +73,10 @@ export const Description = styled.p`
   letter-spacing: 1px;
   font-size: 1.1rem;
   width: 60%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const AboutMeText = styled.div``;

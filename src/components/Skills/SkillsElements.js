@@ -20,6 +20,10 @@ export const SkillsContent = styled.div`
   padding-bottom: 30px;
   margin-top: 20rem;
   transform: skew(0deg, -8deg);
+
+  @media screen and (max-width: 687px) {
+    width: 50%;
+  }
 `;
 
 export const Frontend = styled(animated.div)`
@@ -80,11 +84,13 @@ export const Title = styled.h3`
   margin-bottom: 1rem;
   color: #1f1f1f;
   padding: 0 10px;
-  border-color: #fd2155;
-  border-style: solid;
-  border-width: 0 2px 2px 2px;
   font-weight: 700;
   text-transform: uppercase;
+  @media screen and (max-width: 687px) {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
 `;
 
 export const Hashtag = styled.div`
@@ -103,6 +109,9 @@ export const Image = styled.img`
 
   @media screen and (max-width: 687px) {
     width: 2.5rem;
+    position: absolute;
+    top: 10px;
+    left: 110px;
   }
 `;
 
@@ -111,6 +120,11 @@ export const AlignedItem = styled.div`
   justify-content: space-between;
   width: 100%;
   margin: 10px 0 10px 0;
+
+  @media screen and (max-width: 687px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const ListItem = styled.li`

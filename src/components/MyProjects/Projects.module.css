@@ -174,4 +174,8 @@
     font-size: 1rem;
     font-weight: 300;
   }
+  .container .card {
+    width: 300px;
+    height: 250px;
+  }
 }

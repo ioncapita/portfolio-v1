@@ -8,6 +8,9 @@ export const FooterContainer = styled.div`
   display: flex;
   text-align: center;
   background: black;
+  @media screen and (max-width: 768px) {
+    height: 80px;
+  }
 `;
 export const LeftContainer = styled.div`
   width: 49%;
@@ -37,7 +40,7 @@ export const Quote = styled.p`
   color: var(--first-color);
 
   @media screen and (max-width: 768px) {
-    font-size: 0.8rem;
+    font-size: 0.5rem;
   }
 `;
 export const ListIcons = styled.div``;
@@ -47,14 +50,14 @@ export const Address = styled.h2`
   margin-top: 0.3rem;
 
   @media screen and (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 `;
 export const EmailText = styled.h3`
   color: var(--first-color);
   margin-bottom: 0.5rem;
   @media screen and (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.6rem;
   }
 `;
 
@@ -64,5 +67,5 @@ export const RightContainer = styled.div`
 `;
 export const Copyright = styled.p`
   color: var(--first-color);
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 `;

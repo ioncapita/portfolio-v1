@@ -27,7 +27,10 @@ export const Nav = styled.nav`
     backdrop-filter: blur(5px);
   }
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 370px) {
+    &.active {
+      height: 40px;
+    }
     transition: 0.3s all ease;
   }
 `;
@@ -76,6 +79,12 @@ export const NavLogo = styled(LinkR)`
     font-weight: 700;
     padding: 0;
   }
+  @media screen and (max-width: 370px) {
+    &.active {
+      font-size: 1.5em;
+      padding-top: 0;
+    }
+  }
 `;
 
 export const MobileIcon = styled.div`
@@ -94,6 +103,11 @@ export const MobileIcon = styled.div`
 
     &.active {
       font-size: 2rem;
+    }
+  }
+  @media screen and (max-width: 370px) {
+    &.active {
+      font-size: 1rem;
     }
   }
 `;

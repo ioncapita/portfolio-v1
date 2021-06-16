@@ -46,6 +46,10 @@ const Link = styled(Linkedin)`
     background: var(--first-color);
     color: var(--second-color);
   }
+  @media screen and (max-width: 687px) {
+    width: 20px;
+    border-radius: 5px;
+  }
 `;
 const Git = styled(Github)`
   width: 30px;
@@ -62,6 +66,10 @@ const Git = styled(Github)`
   &:hover {
     background: var(--first-color);
     color: var(--second-color);
+  }
+  @media screen and (max-width: 687px) {
+    width: 20px;
+    border-radius: 5px;
   }
 `;
 const Email = styled(EmailOutline)`
@@ -80,6 +88,10 @@ const Email = styled(EmailOutline)`
     background: var(--first-color);
     color: var(--second-color);
   }
+  @media screen and (max-width: 687px) {
+    width: 20px;
+    border-radius: 5px;
+  }
 `;
 
 const Insta = styled(Instagram)`
@@ -97,6 +109,10 @@ const Insta = styled(Instagram)`
   &:hover {
     background: var(--first-color);
     color: var(--second-color);
+  }
+  @media screen and (max-width: 687px) {
+    width: 20px;
+    border-radius: 5px;
   }
 `;
 
