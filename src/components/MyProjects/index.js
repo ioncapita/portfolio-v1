@@ -1,22 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Projects.module.css";
 import netflix from "../animations/netflix-project.JPG";
 import vanillajs from "../animations/weather.JPG";
 import homecinema from "../animations/home-cinema.JPG";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Projects = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <div id="projects" className={styles.Bg}>
       <div className={styles.container}>
         <div className={styles.aligned_section}>
-          <h1 className={styles.title}>
+          <h1 className={styles.title} data-aos="flip-left">
             <span class={styles.hashtag}>#</span>projects
           </h1>
-          <p className={styles.description}>
+          <p className={styles.description} data-aos="flip-left">
             Some of my greatest and latest projects.
           </p>
         </div>
-        <div className={styles.card}>
+        <div className={styles.card} data-aos="zoom-in">
           <div className={styles.imgBx}>
             <img src={netflix} alt="#" />
           </div>
@@ -44,7 +49,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className={styles.card}>
+        <div className={styles.card} data-aos="zoom-in">
           <div className={styles.imgBx}>
             <img src={vanillajs} alt="#" />
           </div>
@@ -68,7 +73,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
-        <div className={styles.card}>
+        <div className={styles.card} data-aos="zoom-in">
           <div className={styles.imgBx}>
             <img src={homecinema} alt="#" />
           </div>

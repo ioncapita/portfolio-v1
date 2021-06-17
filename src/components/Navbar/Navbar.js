@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import {
   Nav,
@@ -10,6 +10,8 @@ import {
   NavLinks,
 } from "./NavbarElements";
 import { animateScroll as scroll } from "react-scroll";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Navbar = ({ toggle }) => {
   const [navbar, setNavbar] = useState(false);
@@ -34,6 +36,9 @@ const Navbar = ({ toggle }) => {
       setUl(false);
     }
   };
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   window.addEventListener("scroll", changeBackground);
   window.addEventListener("scroll", changeBackgroundUl);
@@ -61,6 +66,8 @@ const Navbar = ({ toggle }) => {
                 spy={true}
                 smooth={true}
                 offset={-220}
+                data-aos="fade-down"
+                data-aos-duration="500"
               >
                 About
               </NavLinks>
@@ -71,6 +78,8 @@ const Navbar = ({ toggle }) => {
                 to="skills"
                 spy={true}
                 smooth={true}
+                data-aos="fade-down"
+                data-aos-duration="1000"
               >
                 Skills
               </NavLinks>
@@ -82,6 +91,8 @@ const Navbar = ({ toggle }) => {
                 spy={true}
                 smooth={true}
                 offset={-220}
+                data-aos="fade-down"
+                data-aos-duration="2000"
               >
                 Projects
               </NavLinks>
@@ -93,6 +104,8 @@ const Navbar = ({ toggle }) => {
                 spy={true}
                 smooth={true}
                 offset={-85}
+                data-aos="fade-down"
+                data-aos-duration="3000"
               >
                 Contact Me
               </NavLinks>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./HeroSection.module.css";
 import Particles from "react-particles-js";
 import styled from "styled-components";
@@ -6,6 +6,8 @@ import { Github } from "@styled-icons/boxicons-logos/Github";
 import { Linkedin } from "@styled-icons/boxicons-logos/Linkedin";
 import { EmailOutline } from "@styled-icons/evaicons-outline/EmailOutline";
 import { Instagram } from "@styled-icons/boxicons-logos/Instagram";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Link = styled(Linkedin)`
   width: 60px;
@@ -124,25 +126,63 @@ export default function HeroSection() {
     window.open("https://www.instagram.com/yonelcapita/");
   };
 
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <div id="top" className={styles.container}>
       <Particles className={styles.particles}></Particles>
       <div className={styles.elements}>
         <div className={styles.text_position}>
-          <h1 className={styles.hello}>Hi,</h1>
-          <h2 className={styles.name}>
+          <h1 className={styles.hello} data-aos="fade-down">
+            Hi,
+          </h1>
+          <h2
+            className={styles.name}
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
             I&rsquo;m <span class={styles.firstLetter}>I</span>on,
           </h2>
-          <p className={styles.intro}>a full-stack web developer.</p>
+          <p
+            className={styles.intro}
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
+            a full-stack web developer.
+          </p>
 
-          <a className={styles.resume} href="/Ion_Capita_CV_EN.pdf" download>
+          <a
+            className={styles.resume}
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+            href="/Ion_Capita_CV_EN.pdf"
+            download
+          >
             Download Resume
           </a>
           <ListIcons>
-            <Email onClick={sendMail} />
-            <Link onClick={openLinkedin} />
-            <Git onClick={openGithub} />
-            <Insta onClick={openInstagram} />
+            <Email
+              data-aos="fade-up"
+              data-aos-duration="500"
+              onClick={sendMail}
+            />
+            <Link
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              onClick={openLinkedin}
+            />
+            <Git
+              data-aos="fade-up"
+              data-aos-duration="2000"
+              onClick={openGithub}
+            />
+            <Insta
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              onClick={openInstagram}
+            />
           </ListIcons>
         </div>
       </div>

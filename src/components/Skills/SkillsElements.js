@@ -29,7 +29,7 @@ export const SkillsContent = styled.div`
 export const Frontend = styled(animated.div)`
   padding: 35px 126px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 15px;
@@ -47,7 +47,7 @@ export const Frontend = styled(animated.div)`
 export const Backend = styled(animated.div)`
   padding: 35px 126px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 15px;
@@ -65,7 +65,7 @@ export const Backend = styled(animated.div)`
 export const Tools = styled(animated.div)`
   padding: 35px 126px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 15px;

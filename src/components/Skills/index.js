@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSpring } from "react-spring";
 import {
   SkillsContainer,
@@ -35,13 +35,17 @@ import mongo from "../animations/mongodb.svg";
 import git from "../animations/github.svg";
 import vscode from "../animations/visual-studio-code.svg";
 import postman from "../animations/postman.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Skills = () => {
   const [props, set] = useSpring(() => ({
     xys: [0, 0, 1],
     config: { mass: 10, tension: 200, friction: 50 },
   }));
-
+  useEffect(() => {
+    Aos.init();
+  }, []);
   const calc = (x, y) => [
     -(y - window.innerHeight / 2) / 20,
     (x - window.innerWidth / 2) / 20,
@@ -54,10 +58,10 @@ const Skills = () => {
     <SkillsContainer id="skills">
       <SkillsContent>
         <TitleContainer>
-          <TitleContent>
+          <TitleContent data-aos="flip-left">
             <Hashtag>#</Hashtag>skills
           </TitleContent>
-          <QuoteContent>
+          <QuoteContent data-aos="flip-left">
             I always enjoy learning new things. Especially the technologies that
             make your company special.
           </QuoteContent>
@@ -68,6 +72,7 @@ const Skills = () => {
           style={{
             transform: props.xys.interpolate(trans),
           }}
+          data-aos="zoom-in"
         >
           <Image src={frontend} />
           <Title>Frontend</Title>
@@ -107,6 +112,7 @@ const Skills = () => {
           style={{
             transform: props.xys.interpolate(trans),
           }}
+          data-aos="zoom-in"
         >
           <Image src={backend} />
           <Title>Backend</Title>
@@ -137,6 +143,7 @@ const Skills = () => {
           style={{
             transform: props.xys.interpolate(trans),
           }}
+          data-aos="zoom-in"
         >
           <Image src={tools} />
           <Title>Tools</Title>

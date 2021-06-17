@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 
 import {
@@ -23,6 +23,8 @@ import { Instagram } from "@styled-icons/boxicons-logos/Instagram";
 import { CodeAlt } from "@styled-icons/boxicons-regular/CodeAlt";
 import { Book } from "@styled-icons/bootstrap/Book";
 import { People } from "@styled-icons/bootstrap/People";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Link = styled(Linkedin)`
   width: 60px;
@@ -124,6 +126,10 @@ const PeopleIcon = styled(People)`
 `;
 
 const Contact = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   const sendMail = () => {
     const mailto =
       "mailto:yonelcapita@gmail.com?subject=Dont forget to write a subject :)&body=Hey Ion,";
@@ -142,11 +148,11 @@ const Contact = () => {
   return (
     <ContactContainer id="contact">
       <ConnectContainer>
-        <QuoteContainer>
+        <QuoteContainer data-aos="fade-right">
           <Title> Connect with me:</Title>
           <Quote>Want to get in touch?</Quote>
         </QuoteContainer>
-        <ListIcons>
+        <ListIcons data-aos="fade-left">
           <Email onClick={sendMail} />
           <Link onClick={openLinkedin} />
           <Git onClick={openGithub} />
@@ -154,7 +160,7 @@ const Contact = () => {
         </ListIcons>
       </ConnectContainer>
       <WithMeContainer>
-        <Intro>
+        <Intro data-aos="zoom-in-down">
           <Title>Why work with me?</Title>
           <Quote>
             There are many advantages to working with me. Here are a few:
@@ -163,7 +169,11 @@ const Contact = () => {
       </WithMeContainer>
       <Position>
         <WorkContainer>
-          <Content>
+          <Content
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1500"
+          >
             <Code />
             <WorkTitle>Passionate about development</WorkTitle>
             <Description>
@@ -171,7 +181,11 @@ const Contact = () => {
               passionate people.
             </Description>
           </Content>
-          <Content>
+          <Content
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1500"
+          >
             <BookIcon />
             <WorkTitle>Quick learner</WorkTitle>
             <Description>
@@ -180,7 +194,11 @@ const Contact = () => {
               for me, are: Curiosity, Reflection and Comprehension.
             </Description>
           </Content>
-          <Content>
+          <Content
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1500"
+          >
             <PeopleIcon />
             <WorkTitle>Adaptable</WorkTitle>
             <Description>
