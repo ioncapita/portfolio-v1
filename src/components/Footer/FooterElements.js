@@ -7,7 +7,10 @@ export const FooterContainer = styled.div`
   margin-top: 10rem;
   display: flex;
   text-align: center;
-  background: black;
+  background: #3d3d3d;
+  box-shadow: 0 8px 32px 0 rgba(121, 121, 121, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
   @media screen and (max-width: 768px) {
     height: 80px;
   }
